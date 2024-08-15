@@ -919,11 +919,11 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/sdm660-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.fm@1.0 \
     libaudio_log_utils \
     libgpustats \
     libsdm-disp-vndapis \
     libthermalclient \
-    vendor.qti.hardware.fm@1.0 \
     libantradio \
     CneApp \
     IWlanService \

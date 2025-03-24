@@ -3779,7 +3779,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
-                "libmmcamera_dbg",
                 "libcdsprpc",
                 "libadsp_hvx_stub",
                 "libc++",
@@ -3790,6 +3789,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -3808,7 +3808,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
-                "libmmcamera_dbg",
                 "libcdsprpc",
                 "libc++",
                 "libc",
@@ -3818,6 +3817,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }

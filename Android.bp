@@ -7451,6 +7451,7 @@ cc_prebuilt_library_shared {
                 "libdsutils",
                 "libcutils",
                 "libutils",
+                "libril",
                 "librilutils",
                 "libril-qc-radioconfig",
                 "libril-qc-ltedirectdisc",
@@ -7542,6 +7543,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "libutils",
+                "libril",
                 "libdiag",
                 "libc++",
                 "libc",

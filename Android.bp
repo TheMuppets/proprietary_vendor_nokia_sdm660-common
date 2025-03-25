@@ -296,6 +296,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so",
             ],
             shared_libs: [
+                "libbase_shim",
                 "libbase",
                 "libcutils",
                 "libhidlbase",
@@ -314,6 +315,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so",
             ],
             shared_libs: [
+                "libbase_shim",
                 "libbase",
                 "libcutils",
                 "libhidlbase",

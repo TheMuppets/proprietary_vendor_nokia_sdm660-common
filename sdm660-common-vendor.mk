@@ -221,8 +221,6 @@ PRODUCT_PACKAGES += \
     libOmxVideoDSMode \
     libUBWC \
     libadpcmdec \
-    libadsp_hvx_callback_skel \
-    libadsp_hvx_stub \
     libmulawdec \
     libscveCommon \
     libscveCommon_stub \

@@ -1638,88 +1638,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libminkdescriptor",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libminkdescriptor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libqcbor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libminkdescriptor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libqcbor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libminksocket",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libminksocket.so",
-            ],
-            shared_libs: [
-                "libqrtr",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libminksocket.so",
-            ],
-            shared_libs: [
-                "libqrtr",
-                "libcutils",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libmmosal",
     owner: "nokia",
     strip: {
@@ -1934,47 +1852,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libbinder",
                 "libEGL",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqcbor",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqcbor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqcbor.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libutils",
-                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -2409,55 +2286,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqmi_csvt_srvc",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqmi_csvt_srvc.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libdiag",
-                "libqmi_legacy",
-                "libqmiservices",
-                "libqcci_legacy",
-                "libqmi_client_qmux",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqmi_csvt_srvc.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libdiag",
-                "libqmi_legacy",
-                "libqmiservices",
-                "libqcci_legacy",
-                "libqmi_client_qmux",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqmi_encdec",
     owner: "nokia",
     strip: {
@@ -2583,41 +2411,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqrtr",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libqrtr.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqrtr.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqseed3",
     owner: "nokia",
     strip: {
@@ -2638,6 +2431,41 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libqseed3.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqsocket",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libqsocket.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqsocket.so",
             ],
             shared_libs: [
                 "libc++",
@@ -3757,34 +3585,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "com.qualcomm.qti.imscmservice@1.0",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.qualcomm.qti.imscmservice@2.0",
     owner: "nokia",
     strip: {
@@ -4252,7 +4052,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "liblog",
                 "libutils",
-                "vendor.qti.hardware.qccvndhal@1.0",
+                "vendor.qti.hardware.qccvndhal@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -4329,6 +4129,34 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "64",
     relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib-imsSDP",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib-imsSDP.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "lib-imsdpl",
+                "lib-rtpcommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -4765,6 +4593,7 @@ cc_prebuilt_library_shared {
                 "lib-imsxml",
                 "lib-siputility",
                 "libqti_vndfwk_detect",
+                "lib-imsSDP",
                 "lib-imscmservice",
                 "com.qualcomm.qti.imscmservice@2.0",
                 "com.qualcomm.qti.uceservice@2.0",
@@ -5239,6 +5068,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5292,31 +5122,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcneqmiutils",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcneqmiutils.so",
-            ],
-            shared_libs: [
-                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -5991,6 +5796,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libminksocket",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libminksocket.so",
+            ],
+            shared_libs: [
+                "libqrtr",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libmm-hdcpmgr",
     owner: "nokia",
     strip: {
@@ -6175,30 +6007,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liboemaids_vendor",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liboemaids_vendor.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "liboemcrypto",
     owner: "nokia",
     strip: {
@@ -6263,36 +6071,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpdnotifier",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpdnotifier.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libqmi_cci",
-                "libqmi_common_so",
-                "libqmi_encdec",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libperipheral_client",
     owner: "nokia",
     strip: {
@@ -6339,8 +6117,7 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libfmq",
                 "libhidlbase",
-                "vendor.qti.hardware.qccsyshal@1.0",
-                "libmmosal",
+                "vendor.qti.hardware.qccsyshal@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -6461,7 +6238,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqsocket",
+    name: "libqrtr",
     owner: "nokia",
     strip: {
         none: true,
@@ -6469,7 +6246,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libqsocket.so",
+                "proprietary/vendor/lib64/libqrtr.so",
             ],
             shared_libs: [
                 "libc++",
@@ -6595,8 +6372,6 @@ cc_prebuilt_library_shared {
                 "libxml",
                 "qtibus",
                 "libsystem_health_mon",
-                "libpdmapper",
-                "libpdnotifier",
                 "libxml2",
                 "libdsi_netctrl",
                 "libqdp",
@@ -6668,75 +6443,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libril-qc-qmi-1",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libril-qc-qmi-1.so",
-            ],
-            shared_libs: [
-                "libdsutils",
-                "libcutils",
-                "libutils",
-                "libril",
-                "librilutils",
-                "libril-qc-radioconfig",
-                "libril-qc-ltedirectdisc",
-                "libril-qcril-hook-oem",
-                "libqmi_cci",
-                "libqmi",
-                "libqmi_client_qmux",
-                "libdiag",
-                "libhardware_legacy",
-                "libqmiservices",
-                "librilqmiservices",
-                "libqmi_client_helper",
-                "libidl",
-                "libtime_genoff",
-                "libsqlite",
-                "libmdmdetect",
-                "libperipheral_client",
-                "libsettings",
-                "liblog",
-                "libhidlbase",
-                "vendor.qti.hardware.radio.ims@1.0",
-                "vendor.qti.hardware.radio.qcrilhook@1.0",
-                "vendor.qti.hardware.radio.am@1.0",
-                "vendor.qti.hardware.radio.qtiradio@1.0",
-                "vendor.qti.hardware.radio.uim_remote_server@1.0",
-                "vendor.qti.hardware.radio.uim_remote_client@1.0",
-                "vendor.qti.hardware.radio.lpa@1.0",
-                "vendor.qti.hardware.radio.uim@1.0",
-                "vendor.qti.hardware.radio.uim@1.1",
-                "android.hardware.secure_element@1.0",
-                "android.hardware.radio.config@1.0",
-                "android.hardware.radio@1.0",
-                "vendor.qti.hardware.data.connection@1.0",
-                "vendor.qti.hardware.data.connection@1.1",
-                "libsystem_health_mon",
-                "libpdmapper",
-                "libpdnotifier",
-                "libxml2",
-                "libdsi_netctrl",
-                "libqdp",
-                "liblqe",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libril-qc-radioconfig",
     owner: "nokia",
     strip: {
@@ -6784,6 +6490,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -7070,34 +6777,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtrustedapploader",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libtrustedapploader.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libminkdescriptor",
-                "libminksocket",
-                "libqcbor",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libtzdrmgenprov",
     owner: "nokia",
     strip: {
@@ -7198,6 +6877,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -8486,7 +8166,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccsyshal@1.0",
+    name: "vendor.qti.hardware.qccsyshal@1.0_vendor",
+    stem: "vendor.qti.hardware.qccsyshal@1.0",
     owner: "nokia",
     strip: {
         none: true,
@@ -8530,7 +8211,7 @@ cc_prebuilt_library_shared {
                 "libfmq",
                 "libcutils",
                 "liblog",
-                "vendor.qti.hardware.qccvndhal@1.0",
+                "vendor.qti.hardware.qccvndhal@1.0_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -8544,7 +8225,8 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.hardware.qccvndhal@1.0",
+    name: "vendor.qti.hardware.qccvndhal@1.0_vendor",
+    stem: "vendor.qti.hardware.qccvndhal@1.0",
     owner: "nokia",
     strip: {
         none: true,
@@ -9412,6 +9094,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.slmadapter@1.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.hardware.tui_comm@1.0",
     owner: "nokia",
     strip: {
@@ -9996,6 +9706,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/lib-imsvideocodec.so",
             ],
             shared_libs: [
+                "libui_shim",
                 "libgui_shim",
                 "lib-imsvtutils",
                 "lib-imsvtextutils",
@@ -10390,6 +10101,94 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libmwqemiptablemgr",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libmwqemiptablemgr.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libdpmframework",
+                "libdiag_system",
+                "com.qualcomm.qti.dpm.api@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcc",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libqcc.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbase",
+                "libfmq",
+                "libhidlbase",
+                "vendor.qti.hardware.qccvndhal@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqcc_file_agent_sys",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libqcc_file_agent_sys.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.qti.diaghal@1.0",
     owner: "nokia",
     strip: {
@@ -10427,6 +10226,93 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/system_ext/lib64/vendor.qti.hardware.fm@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccsyshal@1.0-halimpl",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0-halimpl.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libhidlbase",
+                "libutils",
+                "libfmq",
+                "libqcc_file_agent_sys",
+                "vendor.qti.hardware.qccsyshal@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccsyshal@1.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.qccvndhal@1.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so",
             ],
             shared_libs: [
                 "libhidlbase",
@@ -10615,6 +10501,41 @@ prebuilt_etc_xml {
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "adpl",
+    owner: "nokia",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/adpl",
+            ],
+            shared_libs: [
+                "libc",
+                "liblog",
+                "libdiag",
+                "libdsutils",
+                "librmnetctl",
+                "libqmi_cci",
+                "libqmiservices",
+                "libnetutils",
+                "libcutils",
+                "libqmi_client_qmux",
+                "libqmi_encdec",
+                "libqcmaputils",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }
 
@@ -11065,38 +10986,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "vendor.qti.hardware.qccvndhal@1.0-service",
-    owner: "nokia",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service",
-            ],
-            shared_libs: [
-                "libhidlbase",
-                "libutils",
-                "libfmq",
-                "vendor.qti.hardware.qccvndhal@1.0-halimpl",
-                "vendor.qti.hardware.qccvndhal@1.0",
-                "libbinder",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.qseecom@1.0-service",
     owner: "nokia",
     target: {
@@ -11257,6 +11146,7 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     strip: {
         none: true,
     },
@@ -11855,30 +11745,6 @@ cc_prebuilt_binary {
         },
     },
     compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "ssgqmigd",
-    owner: "nokia",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/ssgqmigd",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
     strip: {
         none: true,
     },

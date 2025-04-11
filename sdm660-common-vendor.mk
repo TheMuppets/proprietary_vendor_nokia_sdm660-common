@@ -13,8 +13,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/sdm660-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/nokia/sdm660-common/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/nokia/sdm660-common/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
-    vendor/nokia/sdm660-common/proprietary/system_ext/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephonyservice.xml \
-    vendor/nokia/sdm660-common/proprietary/vendor/etc/Diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/Diag.cfg \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/cacert_location.pem:$(TARGET_COPY_OUT_VENDOR)/etc/cacert_location.pem \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
@@ -58,8 +56,6 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/imsdatadaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdatadaemon.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/imsrcsd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsrcsd.rc \
-    vendor/nokia/sdm660-common/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
-    vendor/nokia/sdm660-common/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
@@ -68,10 +64,11 @@ PRODUCT_COPY_FILES += \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.dsp@1.0-service.rc \
-    vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
+    vendor/nokia/sdm660-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
     vendor/nokia/sdm660-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
@@ -165,14 +162,11 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
-    libminkdescriptor \
-    libminksocket \
     libmmosal \
     libmmsw_detail_enhancement \
     libmmsw_math \
     libmmsw_opencl \
     libmmsw_platform \
-    libqcbor \
     libqcci_legacy \
     libqdi \
     libqdp \
@@ -182,12 +176,11 @@ PRODUCT_PACKAGES += \
     libqmi_client_qmux \
     libqmi_common_so \
     libqmi_csi \
-    libqmi_csvt_srvc \
     libqmi_encdec \
     libqmi_legacy \
     libqmiservices \
-    libqrtr \
     libqseed3 \
+    libqsocket \
     librs_adreno \
     librs_adreno_sha1 \
     libsdm-color \
@@ -220,7 +213,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.scve.objecttracker@1.0 \
     vendor.qti.hardware.scve.panorama@1.0 \
     com.qualcomm.qti.dpm.api@1.0_vendor \
-    com.qualcomm.qti.imscmservice@1.0 \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
     com.qualcomm.qti.imscmservice@2.2 \
@@ -238,6 +230,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.qteeconnector@1.0-impl \
+    lib-imsSDP \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -269,7 +262,6 @@ PRODUCT_PACKAGES += \
     libcne \
     libcneapiclient \
     libcneoplookup \
-    libcneqmiutils \
     libconfigdb \
     libcpion \
     libdataitems \
@@ -292,28 +284,26 @@ PRODUCT_PACKAGES += \
     liblocationservice_glue \
     liblowi_client \
     liblqe \
+    libminksocket \
     libmm-hdcpmgr \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
-    liboemaids_vendor \
     liboemcrypto \
     libpdmapper \
-    libpdnotifier \
     libperipheral_client \
     libqcc_file_agent \
     libqcmaputils \
     libqcrilFramework \
     libqcrildatactl \
     libqisl \
-    libqsocket \
+    libqrtr \
     librcc \
     libril-qc-hal-qmi \
     libril-qc-logger \
     libril-qc-ltedirectdisc \
-    libril-qc-qmi-1 \
     libril-qc-radioconfig \
     libril-qcril-hook-oem \
     librilqmiservices \
@@ -326,7 +316,6 @@ PRODUCT_PACKAGES += \
     libsystem_health_mon \
     libthermalfeature \
     libtime_genoff \
-    libtrustedapploader \
     libtzdrmgenprov \
     libwms \
     libwqe \
@@ -372,9 +361,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.qmi@1.0 \
     vendor.qti.hardware.fm@1.0_vendor \
     vendor.qti.hardware.mwqemadapter@1.0 \
-    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0_vendor \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
-    vendor.qti.hardware.qccvndhal@1.0 \
+    vendor.qti.hardware.qccvndhal@1.0_vendor \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
@@ -403,6 +392,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
     vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
+    vendor.qti.hardware.slmadapter@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
     vendor.qti.ims.callcapability@1.0 \
     vendor.qti.ims.callinfo@1.0 \
@@ -434,8 +424,14 @@ PRODUCT_PACKAGES += \
     libfm-hci \
     libimscamera_jni \
     libimsmedia_jni \
+    libmwqemiptablemgr \
+    libqcc \
+    libqcc_file_agent_sys \
     vendor.qti.diaghal@1.0 \
     vendor.qti.hardware.fm@1.0 \
+    vendor.qti.hardware.qccsyshal@1.0-halimpl \
+    vendor.qti.hardware.qccsyshal@1.0 \
+    vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.imsrtpservice@3.0 \
     CneApp \
     IWlanService \
@@ -451,6 +447,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     vendor.qti.gnss@4.0-service.xml \
+    adpl \
     adsprpcd \
     cdsprpcd \
     cnd \
@@ -465,7 +462,6 @@ PRODUCT_PACKAGES += \
     qcrild \
     vendor.display.color@1.0-service \
     vendor.qti.hardware.alarm@1.0-service \
-    vendor.qti.hardware.qccvndhal@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
     vendor.qti.hardware.qteeconnector@1.0-service \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
@@ -491,7 +487,6 @@ PRODUCT_PACKAGES += \
     qseecomd \
     qti \
     rmt_storage \
-    ssgqmigd \
     tftp_server \
     thermal-engine \
     time_daemon \

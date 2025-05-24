@@ -129,8 +129,6 @@ PRODUCT_PACKAGES += \
     libGLESv2_adreno \
     libQTapGLES \
     libq3dtools_adreno \
-    android.hardware.health@2.0-impl-2.1 \
-    sound_trigger.primary.sdm660 \
     vulkan.sdm660 \
     libC2D2 \
     libCB \
@@ -151,10 +149,6 @@ PRODUCT_PACKAGES += \
     libfastcrc \
     libfastcvopt \
     libfastrpc_utf_stub \
-    libgcs-calwrapper \
-    libgcs-ipc \
-    libgcs-osal \
-    libgcs \
     libgsl \
     libidl \
     libllvm-glnext \
@@ -188,29 +182,27 @@ PRODUCT_PACKAGES += \
     libsdmextension \
     libsdsprpc \
     libsysmon_cdsp_skel \
-    libthermalclient \
     libtinyxml2_1 \
     libvpphvx \
     libvpplibrary \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
+    sound_trigger.primary.sdm660 \
     libOmxVideoDSMode \
     libUBWC \
     libadpcmdec \
+    libgcs-calwrapper \
+    libgcs-ipc \
+    libgcs-osal \
+    libgcs \
     libmulawdec \
-    libscveCommon \
-    libscveCommon_stub \
-    libscveObjectSegmentation \
-    libscveObjectTracker \
     libsmwrapper \
     libstreamparser \
     libvideoutils \
     libwfdcommonutils_proprietary \
     libwfddisplayconfig_proprietary \
     libwfdmmservice \
-    vendor.qti.hardware.scve.objecttracker@1.0 \
-    vendor.qti.hardware.scve.panorama@1.0 \
     com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
@@ -221,6 +213,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.uceservice@2.3 \
     ftm_fm_lib \
     android.hardware.bluetooth@1.0-impl-qti \
+    android.hardware.health@2.0-impl-2.1 \
     com.dsi.ant@1.0-impl \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
@@ -313,6 +306,7 @@ PRODUCT_PACKAGES += \
     libsettings \
     libssd \
     libsystem_health_mon \
+    libthermalclient \
     libthermalfeature \
     libtime_genoff \
     libtzdrmgenprov \

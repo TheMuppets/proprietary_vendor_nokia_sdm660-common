@@ -3561,39 +3561,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.health@2.0-impl-2.1",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/android.hardware.health@2.0-impl-2.1.so",
-            ],
-            shared_libs: [
-                "libbase_shim",
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hardware.health@2.1",
-                "android.hardware.health@2.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "com.dsi.ant@1.0-impl",
     owner: "nokia",
     strip: {
@@ -10390,15 +10357,6 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.health@2.1.xml",
-    owner: "nokia",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.health@2.1.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "manifest_android.hardware.drm@1.3-service.widevine.xml",
     owner: "nokia",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
@@ -10781,38 +10739,6 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.health@2.1-service",
-    owner: "nokia",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.health@2.1-service",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "android.hardware.health@2.1",
-                "android.hardware.health@2.0",
                 "libc++",
                 "libc",
                 "libm",

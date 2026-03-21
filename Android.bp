@@ -5318,6 +5318,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libjnihelper",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libjnihelper.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libqmiservices",
+                "libqmi_cci",
+                "libcacertclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libkeymasterdeviceutils",
     owner: "nokia",
     strip: {
@@ -7726,6 +7755,34 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "vendor.qti.hardware.bluetooth_sar@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.cacert@1.0",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.cacert@1.0.so",
+            ],
+            shared_libs: [
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -10278,6 +10335,17 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
+}
+
+android_app_import {
+    name: "CACertService",
+    owner: "nokia",
+    apk: "proprietary/vendor/app/CACertService/CACertService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    soc_specific: true,
 }
 
 android_app_import {

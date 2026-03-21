@@ -282,6 +282,7 @@ PRODUCT_PACKAGES += \
     libhdr_tm \
     libizat_client_api \
     libizat_core \
+    libjnihelper \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
@@ -360,6 +361,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.0 \
     vendor.qti.hardware.bluetooth_sar@1.1 \
+    vendor.qti.hardware.cacert@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
@@ -444,6 +446,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.0 \
     vendor.qti.hardware.qccvndhal@1.0 \
     vendor.qti.imsrtpservice@3.0 \
+    CACertService \
     CneApp \
     IWlanService \
     TimeService \

@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
     libsdmextension \
     libsdsprpc \
     libsysmon_cdsp_skel \
+    libthermalclient \
     libtinyxml2_1 \
     libvpphvx \
     libvpplibrary \
@@ -324,7 +325,6 @@ PRODUCT_PACKAGES += \
     libsettings \
     libssd \
     libsystem_health_mon \
-    libthermalclient \
     libthermalfeature \
     libtime_genoff \
     libtzdrmgenprov \

@@ -234,7 +234,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccvndhal@1.0-impl \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.qti.hardware.qteeconnector@1.0-impl \
-    lib-imsSDP \
     lib-imscmservice \
     lib-imsdpl \
     lib-imsqimf \
@@ -261,6 +260,7 @@ PRODUCT_PACKAGES += \
     libbase64 \
     libbt-hidlclient \
     libbtnv \
+    libcacertclient \
     libcdfw \
     libcdfw_remote_api \
     libcne \
@@ -300,6 +300,7 @@ PRODUCT_PACKAGES += \
     libnlnetmgr \
     liboemcrypto \
     libpdmapper \
+    libpdnotifier \
     libperipheral_client \
     libqcbor \
     libqcc_file_agent \

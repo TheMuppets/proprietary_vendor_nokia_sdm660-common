@@ -3840,34 +3840,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib-imsSDP",
-    owner: "nokia",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lib-imsSDP.so",
-            ],
-            shared_libs: [
-                "libcutils",
-                "liblog",
-                "lib-imsdpl",
-                "lib-rtpcommon",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib-imscmservice",
     owner: "nokia",
     strip: {
@@ -4299,7 +4271,6 @@ cc_prebuilt_library_shared {
                 "lib-imsxml",
                 "lib-siputility",
                 "libqti_vndfwk_detect",
-                "lib-imsSDP",
                 "lib-imscmservice",
                 "com.qualcomm.qti.imscmservice@2.0",
                 "com.qualcomm.qti.uceservice@2.0",
@@ -4658,6 +4629,35 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libbtnv.so",
             ],
             shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcacertclient",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcacertclient.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhidlbase",
+                "vendor.qti.hardware.cacert@1.0",
                 "libc++",
                 "libc",
                 "libm",
@@ -5861,6 +5861,36 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libpdnotifier",
+    owner: "nokia",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libpdnotifier.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libqmi_cci",
+                "libqmi_common_so",
+                "libqmi_encdec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libperipheral_client",
     owner: "nokia",
     strip: {
@@ -5935,6 +5965,7 @@ cc_prebuilt_library_shared {
                 "libfmq",
                 "libhidlbase",
                 "vendor.qti.hardware.qccsyshal@1.0_vendor",
+                "libmmosal",
                 "libc++",
                 "libc",
                 "libm",
@@ -6224,6 +6255,8 @@ cc_prebuilt_library_shared {
                 "libxml",
                 "qtibus",
                 "libsystem_health_mon",
+                "libpdmapper",
+                "libpdnotifier",
                 "libxml2",
                 "libdsi_netctrl",
                 "libqdp",
@@ -9582,7 +9615,6 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/lib-imsvideocodec.so",
             ],
             shared_libs: [
-                "libui_shim",
                 "libgui_shim",
                 "lib-imsvtutils",
                 "lib-imsvtextutils",
@@ -11368,7 +11400,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/pm-service",
             ],
             shared_libs: [
-                "libutils-v33",
                 "libcutils",
                 "libutils",
                 "liblog",
